@@ -29,12 +29,6 @@ else()
   set(CMAKE_CONFIG_INSTALL_DIR ${CMAKE_INSTALL_FULL_LIBDIR}/${PROJECT_NAME}/cmake/)
 endif()
 
-find_package(catkin REQUIRED)
-
-catkin_package(
-  INCLUDE_DIRS urdf_exception/include urdf_model/include urdf_model_state/include urdf_sensor/include urdf_world/include
-)
-
 set(PACKAGE_NAME ${PROJECT_NAME})
 set(cmake_conf_file "${PROJECT_NAME}-config.cmake")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/${cmake_conf_file}.in" "${CMAKE_BINARY_DIR}/${cmake_conf_file}" @ONLY)
